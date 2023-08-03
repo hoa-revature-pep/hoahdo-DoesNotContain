@@ -22,27 +22,16 @@ public class DoesNotContain {
      */
     public boolean arrayDoesNotContain(int[] arr, int target) {
 
-        int[] checkArray = new int[arr.length];
-        int sumOfCheckArray = 0;
+        for (int x = 0; x < arr.length; x++) {
+            boolean doesContain = (target == arr[x]);
 
-        for (int x= 0; x < arr.length; x++) {
-            if(arr[x] == target) {
-                checkArray[x] = 1;
-            } else {
-                checkArray[x] = 0;
+            if (doesContain) {
+                return false;
             }
+
         }
 
-        for (int y = 0; y < checkArray.length; y++) {
-            sumOfCheckArray = sumOfCheckArray + checkArray[y];
-        }
-
-        if (sumOfCheckArray == 0) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return true;
     }
 }
 
@@ -54,3 +43,77 @@ public class DoesNotContain {
 // sum up all values in 2nd array
 // if sum is equal to 0, return true
 // else return false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// public boolean arrayDoesNotContain(int[] arr, int target) {
+
+// int[] checkArray = new int[arr.length];
+// int sumOfCheckArray = 0;
+
+// for (int x= 0; x < arr.length; x++) {
+// if(arr[x] == target) {
+// checkArray[x] = 1;
+// } else {
+// checkArray[x] = 0;
+// }
+// }
+
+// for (int y = 0; y < checkArray.length; y++) {
+// sumOfCheckArray = sumOfCheckArray + checkArray[y];
+// }
+
+// if (sumOfCheckArray == 0) {
+// return true;
+// } else {
+// return false;
+// }
+
+// }
+
+// public boolean arrayDoesNotContain(int[] arr, int target) {
+
+// int matches = 0;
+
+// for (int x = 0; x < arr.length; x++) {
+// boolean doesContain = (target == arr[x]);
+
+// if(doesContain) {
+// matches = 1;
+// }
+
+// }
+
+// if(matches == 0) {
+// return true;
+// }
+
+// return false;
+// }
